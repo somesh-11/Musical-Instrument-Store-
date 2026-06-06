@@ -19,32 +19,9 @@ Auto Scaling Group (ASG)
 
 The static website files are hosted on an EC2 instance running a web server, and the Auto Scaling Group ensures instance availability and scalability.
 
-Architecture
-
-Internet
-    │
-    ▼
-Internet Gateway
-    │
-    ▼
-Custom VPC
-    │
-    └── Public Subnet
-            │
-            ▼
-      Auto Scaling Group
-            │
-            ▼
-        EC2 Instance
-            │
-            ▼
-      Apache/Nginx Web Server
-            │
-            ▼
-       Static Website
-
-  AWS Services Used
-Service	Purpose
+##AWS Services Used
+  
+- Service	Purpose
 VPC	Network isolation
 Public Subnet	Hosts web server
 Internet Gateway	Internet access
