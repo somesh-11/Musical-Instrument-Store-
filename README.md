@@ -48,42 +48,42 @@ Create a custom VPC
 Configure CIDR block
 Enable DNS hostnames
 
-3. Create Public Subnet
+2. Create Public Subnet
 Create subnet within VPC
 Associate route table
 
-4. Configure Internet Gateway
+3. Configure Internet Gateway
 Attach Internet Gateway to VPC
 Add default route (0.0.0.0/0)
 
-5. Create Security Group
+4. Create Security Group
 Allow:
 HTTP (80)
 SSH (22)
 
-6. Launch EC2 Instance
+5. Launch EC2 Instance
 Amazon Linux 2
 t2.micro (Free Tier)
 Associate public IP
 
-7. Install Web Server
+6. Install Web Server
 Example:
 sudo yum update -y
 sudo yum install httpd -y
 sudo systemctl start httpd
 sudo systemctl enable httpd
 
-8. Deploy Website Files
+7. Deploy Website Files
 sudo cp -r website-files/* /var/www/html/
 
-9. Create Launch Template
+8. Create Launch Template
 Configure:
 - AMI
 - Instance Type
 - Security Group
 - User Data
 
-10. Create Auto Scaling Group
+9. Create Auto Scaling Group
 Attach Launch Template
 Select VPC and subnet
 Configure desired capacity
